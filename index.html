@@ -87,31 +87,32 @@
   </section>
 
   <section id="analyzer" class="analyzer">
-    <div class="panel">
-      <h2>Analyzer</h2>
-      <form id="analyzeForm" autocomplete="off">
-        <div class="tabs" role="tablist" aria-label="Jenis analisis">
+    <div class="chat-wrap">
+      <div class="chat-header">
+        <span class="chat-status">Assistant</span>
+        <span class="chip muted" id="modeHint">Phone</span>
+      </div>
+
+      <div class="chat-history" id="chatHistory">
+        <div class="msg bot">
+          <div class="bubble">Halo. Aku siap membantu analisis phone, link, nama, atau lokasi secara etis.
+          Ketik atau pilih mode di bawah, lalu kirim.</div>
+        </div>
+      </div>
+
+      <form id="chatForm" class="chat-input-row" autocomplete="off">
+        <div class="chat-tabs" role="tablist" aria-label="Jenis analisis">
           <button class="tab active" data-mode="phone" type="button">Phone</button>
           <button class="tab" data-mode="link" type="button">Link</button>
           <button class="tab" data-mode="name" type="button">Name</button>
           <button class="tab" data-mode="location" type="button">Location</button>
         </div>
-        <label for="input" id="inputLabel">Nomor HP</label>
+        <label for="input" class="sr-only" id="inputLabel">Nomor HP</label>
         <div class="input-row">
-          <input id="input" type="text" placeholder="contoh: +62812xxxx" required>
-          <button class="btn primary" type="submit">Analisis</button>
-        </div>
-        <div class="options">
-          <span class="chip muted" id="modeHint">Mode: Phone</span>
+          <input id="input" type="text" placeholder="contoh: +62812xxxx atau Jakarta" required>
+          <button class="btn primary" type="submit">Kirim</button>
         </div>
       </form>
-      <div id="result" class="result" hidden>
-        <div class="result-header">
-          <div class="result-title">Hasil Analisis</div>
-          <div class="result-meta"></div>
-        </div>
-        <pre class="result-body" id="resultBody"></pre>
-      </div>
     </div>
   </section>
 
