@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSINT Intelligence — Phone & Link Analyzer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<canvas id="noise"></canvas>
+<div class="aura"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">◆</span>
+    <span class="brand-text">OSINT<span class="accent">Lab</span></span>
+  </div>
+  <nav class="nav">
+    <a class="nav-link" href="#features">Fitur</a>
+    <a class="nav-link" href="#analyzer">Analyzer</a>
+    <a class="nav-link" href="#faq">FAQ</a>
+  </nav>
+  <a class="btn primary" href="#analyzer">Mulai Analisis</a>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Intelijen Terbuka<br>
+        <span class="gradient-text">Modern & Powerful</span>
+      </h1>
+      <p class="hero-desc">
+        Platform analisis nomor HP dan tautan dengan pendekatan OSINT yang etis,
+        akurat, dan mudah digunakan.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary glow" href="#analyzer">Analisis Sekarang</a>
+        <a class="btn secondary" href="#features">Lihat Fitur</a>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num">99.9%</div>
+          <div class="stat-label">Akurasi Format</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">< 1s</div>
+          <div class="stat-label">Waktu Respons</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Data Pribadi Disimpan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="section-head">
+      <h2>Fitur Unggulan</h2>
+      <p>Dirancang untuk kecepatan, keandalan, dan privasi.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">📱</div>
+        <h3>Phone Intelligence</h3>
+        <p>Analisis format nomor, kode negara, operator, dan wilayah kemungkinan.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🔗</div>
+        <h3>Link Intelligence</h3>
+        <p>Deteksi domain, subdomain, dan identifikasi pola tautan mencurigakan.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🛡️</div>
+        <h3>Privacy First</h3>
+        <p>Tidak menyimpan data pribadi. Semua analisis independen dan stateless.</p>
+      </article>
+      <article class="card">
+        <div class="icon">⚡</div>
+        <h3>Performa</h3>
+        <p>Optimasi loading dan caching agar hasil cepat dan nyaman digunakan.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="analyzer" class="analyzer">
+    <div class="panel">
+      <h2>Analyzer</h2>
+      <form id="analyzeForm" autocomplete="off">
+        <label for="input">Nomor HP / Link</label>
+        <div class="input-row">
+          <input id="input" type="text" placeholder="contoh: +62812xxxx atau https://example.com" required>
+          <button class="btn primary" type="submit">Analisis</button>
+        </div>
+        <div class="options">
+          <label class="chip">
+            <input type="checkbox" name="phone" checked> Phone
+          </label>
+          <label class="chip">
+            <input type="checkbox" name="link" checked> Link
+          </label>
+        </div>
+      </form>
+      <div id="result" class="result" hidden>
+        <div class="result-header">
+          <div class="result-title">Hasil Analisis</div>
+          <div class="result-meta"></div>
+        </div>
+        <pre class="result-body" id="resultBody"></pre>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="section-head">
+      <h2>FAQ</h2>
+      <p>Jawaban cepat untuk pertanyaan umum.</p>
+    </div>
+    <details class="faq-item">
+      <summary>Apakah data saya disimpan?</summary>
+      <p>Tidak. Kami tidak menyimpan input atau hasil analisis di server.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Apakah ini ilegal?</summary>
+      <p>Tidak, selama Anda hanya menganalisis data yang usted Miliki hak akses atau bersifat publik.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Apakah mendukung domain .id?</summary>
+      <p>Ya, dukungan untukTLD umum dan kode negaraInternational.</p>
+    </details>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="brand">
+      <span class="brand-mark">◆</span>
+      <span class="brand-text">OSINT<span class="accent">Lab</span></span>
+    </div>
+    <div class="copy">© <span id="year"></span> OSINTLab. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
