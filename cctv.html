@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSINTLab — CCTV Publik Indonesia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<canvas id="noise"></canvas>
+<div class="aura"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">◆</span>
+    <span class="brand-text">OSINT<span class="accent">Lab</span></span>
+  </div>
+  <nav class="nav">
+    <a class="nav-link" href="../index.html">Home</a>
+    <a class="nav-link" href="../index.html#features">Fitur</a>
+    <a class="nav-link" href="../index.html#analyzer">Analyzer</a>
+    <a class="nav-link" href="#cctv">CCTV</a>
+    <a class="nav-link" href="../index.html#faq">FAQ</a>
+  </nav>
+  <a class="btn primary" href="../index.html#analyzer">Mulai Analisis</a>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        CCTV Publik<br>
+        <span class="gradient-text">Indonesia</span>
+      </h1>
+      <p class="hero-desc">
+        Daftar tautan CCTV publik dari berbagai instansi di Indonesia untuk keperluan
+        pendidikan, keamanan, dan penelitian etis. Klik kartu untuk langsung membuka.
+      </p>
+      <p class="hero-desc muted small">
+        Hanya menampilkan sumber yang dipublikasikan secara legal oleh instansi pemerintah.
+      </p>
+    </div>
+  </section>
+
+  <section id="cctv" class="features">
+    <div class="section-head">
+      <h2>Daftar CCTV Publik</h2>
+      <p>Pilih kota untuk melihat CCTV yang tersedia.</p>
+    </div>
+    <div class="cards" id="cctvGrid"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="brand">
+      <span class="brand-mark">◆</span>
+      <span class="brand-text">OSINT<span class="accent">Lab</span></span>
+    </div>
+    <div class="copy">© <span id="year"></span> OSINTLab. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="assets/cctv.js"></script>
+</body>
+</html>
