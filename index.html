@@ -90,18 +90,19 @@
     <div class="panel">
       <h2>Analyzer</h2>
       <form id="analyzeForm" autocomplete="off">
-        <label for="input">Nomor HP / Link</label>
+        <div class="tabs" role="tablist" aria-label="Jenis analisis">
+          <button class="tab active" data-mode="phone" type="button">Phone</button>
+          <button class="tab" data-mode="link" type="button">Link</button>
+          <button class="tab" data-mode="name" type="button">Name</button>
+          <button class="tab" data-mode="location" type="button">Location</button>
+        </div>
+        <label for="input" id="inputLabel">Nomor HP</label>
         <div class="input-row">
-          <input id="input" type="text" placeholder="contoh: +62812xxxx atau https://example.com" required>
+          <input id="input" type="text" placeholder="contoh: +62812xxxx" required>
           <button class="btn primary" type="submit">Analisis</button>
         </div>
         <div class="options">
-          <label class="chip">
-            <input type="checkbox" name="phone" checked> Phone
-          </label>
-          <label class="chip">
-            <input type="checkbox" name="link" checked> Link
-          </label>
+          <span class="chip muted" id="modeHint">Mode: Phone</span>
         </div>
       </form>
       <div id="result" class="result" hidden>
